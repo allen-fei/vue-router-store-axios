@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="hello">
-            <h2>tab1的内容{{text}}</h2>
+            <h2><router-link to="/a">tab1的内容{{text}}</router-link></h2>
         </div>
     </div>
 </template>
