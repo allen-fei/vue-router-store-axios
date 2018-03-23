@@ -1,9 +1,12 @@
 <template>
     <div id="app">
-        <SLJHead></SLJHead>
+        <SLJHead :message='curView'></SLJHead>
         <component :is="curView"></component>
-        <ul class="foot">
-            <li v-for="(item, index) in tabs" @click="toggleView(index, item.view)">{{item.text}}</li>
+        <ul class="footer">
+            <li v-for="(item, index) in tabs" @click="toggleView(index, item.view)">
+                <i :class="item.clasSty"></i>
+                <span class="tab-label">{{item.text}}</span>
+            </li> 
         </ul>
     </div>
 </template>
@@ -21,16 +24,20 @@ export default {
             active: 0,
             curView: 'SLJTab1',
             tabs: [{
-                text: 'tab1',
+                clasSty: 'iconfont slj-shoukuan',
+                text: '收款',
                 view: 'SLJTab1'
             },{
-                text: 'tab2',
+                clasSty: 'iconfont slj-tuiguang',
+                text: '预约还款',
                 view: 'SLJTab2'
             },{
-                text: 'tab3',
+                clasSty: 'iconfont slj-qianbao',
+                text: '口袋',
                 view: 'SLJTab3'
             },{
-                text: 'tab4',
+                clasSty: 'iconfont slj-wode1',
+                text: '我的',
                 view: 'SLJTab4'
             }]
         }
@@ -41,6 +48,9 @@ export default {
             console.log(this.$store.state.count);
             this.active = i;
             this.curView = v;
+        },
+        headertitle(){
+
         }
     },
     components: {
@@ -58,8 +68,4 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
-
-    *{ margin: 0; padding: 0; }
-    .foot{ list-style: none; position: absolute; bottom: 0; left: 0; right: 0; height: 50px; }
-    .foot li{ width: 25%; float: left; height: 50px; line-height: 50px; }
 </style>

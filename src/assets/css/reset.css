@@ -60,6 +60,130 @@ figure { margin: 1em 40px; }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-tap-highlight-color:rgba(255,255,255,0); }
 *:before,*:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
+@font-face {font-family: "iconfont";
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slj-fanhui:before { content: "\e600"; }
+
+.slj-iconfontcha:before { content: "\e603"; }
+
+.slj-shezhi:before { content: "\e6a7"; }
+
+.slj-mima:before { content: "\e62d"; }
+
+.slj-fenxiang:before { content: "\e602"; }
+
+.slj-bianji:before { content: "\e60b"; }
+
+.slj-shibai:before { content: "\e60c"; }
+
+.slj-zhifubao:before { content: "\e613"; }
+
+.slj-shenheshibai:before { content: "\e6af"; }
+
+.slj-more:before { content: "\e617"; }
+
+.slj-shanchu:before { content: "\e62f"; }
+
+.slj-saoyisao1:before { content: "\e67d"; }
+
+.slj-qian:before { content: "\e62a"; }
+
+.slj-yinxingqia:before { content: "\e62e"; }
+
+.slj-qianbao:before { content: "\e60e"; }
+
+.slj-gerenziliao:before { content: "\e6d8"; }
+
+.slj-tongzhi1:before { content: "\e61d"; }
+
+.slj-tubiao07:before { content: "\e60f"; }
+
+.slj-huishan:before { content: "\e62c"; }
+
+.slj-shouji:before { content: "\e627"; }
+
+.slj-guanyuwomen1:before { content: "\e6ac"; }
+
+.slj-shenhechenggong01:before { content: "\e645"; }
+
+.slj-saoma:before { content: "\e624"; }
+
+.slj-dianhua1:before { content: "\e604"; }
+
+.slj-xinghao:before { content: "\e608"; }
+
+.slj-paizhao:before { content: "\e655"; }
+
+.slj-xiaoxi1:before { content: "\e646"; }
+
+.slj-kuaijiezhifu:before { content: "\e63e"; }
+
+.slj-tixian:before { content: "\e605"; }
+
+.slj-jiangli:before { content: "\e606"; }
+
+.slj-riqi:before { content: "\e703"; }
+
+.slj-kuaijie:before { content: "\e610"; }
+
+.slj-qq1:before { content: "\e68b"; }
+
+.slj-tuiguang:before { content: "\e67e"; }
+
+.slj-weixin1:before { content: "\e68d"; }
+
+.slj-kefu2:before { content: "\e730"; }
+
+.slj-VIP:before { content: "\e622"; }
+
+.slj-tuiguang1:before { content: "\e648"; }
+
+.slj-tixian1:before { content: "\e657"; }
+
+.slj-kefu1:before { content: "\e67a"; }
+
+.slj-dianhua:before { content: "\e69f"; }
+
+.slj-shengji:before { content: "\e630"; }
+
+.slj-qq2:before { content: "\e629"; }
+
+.slj-shimingjiangli:before { content: "\e61c"; }
+
+.slj-wode1:before { content: "\e69d"; }
+
+.slj-shenhezhong1:before { content: "\e647"; }
+
+.slj-feishuai:before { content: "\e609"; }
+
+.slj-yinlian1:before { content: "\e6be"; }
+
+.slj-zhangdan:before { content: "\e63d"; }
+
+.slj-gou:before { content: "\e6c5"; }
+
+.slj-icon01:before { content: "\e601"; }
+
+.slj-daili1:before { content: "\e607"; }
+
+.slj-xiaoxizhongxin:before { content: "\e63c"; }
+
+.slj-shoukuan:before { content: "\e640"; }
+
 /*统一单选按钮*/
 input[type='radio']{ display: inline-block; vertical-align: middle; -webkit-appearance: none; outline: 0 !important; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #3E75C7; background-color: #fff;}
 input[type=radio]:checked:after{content: ""; display: block; width: 8px; height: 8px; border-radius: 50%; background-color: #3E75C7; margin: 0 auto; margin-top: 5px;}
@@ -72,6 +196,7 @@ input.pay-submit:disabled{ background: #999;}
 header{ position: absolute; left: 0; top: 0; width: 100%; height: 64px; background: #017ad7; padding-top: 20px; line-height: 44px; -webkit-box-shadow: none !important; box-shadow: none !important;}
 header .head_title{ font-size: 18px; font-weight: 500; text-align: center; color: #fff; margin: 0 60px; line-height: 44px;}
 header > a{ position: absolute; top: 20px; min-width: 40px; height: 44px; text-align: center; display: block; color: #fff; line-height: 44px;}
+header .header-right{position: absolute; top: 20px;right: 21px; color: #fff;}
 header > a.slj-fanhui{ font-size: 24px; text-align: left; padding-left: 10px;}
 header > a.left{ left: 10px;}
 header > a.right{ right: 10px;}
@@ -85,14 +210,15 @@ header .head-m-list a { color: #fff; font-size: 15px; line-height: 34px; }
 			border-width: 0 2px 2px 0; border-color: #cbcbcb; border-style: solid;}
 
 /*wrapper*/
-.wrapper { position: absolute; top:64px; right: 0; left: 0; bottom: 0; width: 100%; display: block; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.wrapper { position: absolute; top:64px; right: 0; left: 0; bottom:50px; width: 100%; display: block; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
 /*底部样式*/
-footer.tab-bottom { position: fixed; z-index: 10; right: 0; left: 0; height: 44px; padding: 0 10px;  background: #fff; -webkit-box-shadow: 0 0 2px rgba(0,0,0,.3); box-shadow: 0 0 2px rgba(0,0,0,.3); -webkit-backface-visibility: hidden; backface-visibility: hidden;}
-footer a{ color: #2e2e2e !important;}
-footer a.mui-active{ color: #0079d6 !important;}
-footer i{ font-size: 20px !important; line-height: 20px;}
-footer span.tab-label{ display: block; font-size: 11px;}
+.footer{ position: fixed; z-index: 10; right: 0; left: 0;bottom: 0; height: 50px; padding: 0 10px;  background: #fff; -webkit-box-shadow: 0 0 2px rgba(0,0,0,.3); box-shadow: 0 0 2px rgba(0,0,0,.3); -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+.footer li{    display: table-cell; overflow: hidden; width: 1%;height: 50px;text-align: center; vertical-align: middle;white-space: nowrap;text-overflow: ellipsis;color: #929292;}
+.footer a{ color: #2e2e2e !important;}
+.footer a.mui-active{ color: #0079d6 !important;}
+.footer i{ font-size: 20px !important; line-height: 20px;}
+.footer span.tab-label{ display: block; font-size: 11px;}
 
 
 /****我的资料 和  设置页面** 可通用***/
