@@ -66,7 +66,7 @@
 </script>
 <style scoped lang="less">
 @import (reference) '../assets/css/slj.less';
-    .my-data{width: 100%;height: 110px;background: url(../assets/img/my-personal.png) no-repeat;background-size: 100%; padding: 0 10px;overflow: hidden;background-position: 0px 0px;;
+    .my-data{width: 100%;height: 110px;background: url("@{img}/my-personal.png") no-repeat;background-size: 100%; padding: 0 10px;overflow: hidden;background-position: 0px 0px;
 		.my-imgs{height:110px;width: 100px;float: left;padding-left: 20px;padding-top: 22px;}
     }
 	.my-imgs img{width: 65px;height: 65px;.border-radius(50%);-moz-box-shadow: 0px 0px 0px 3px #fff;-webkit-box-shadow: 0px 0px 0px 3px #fff;box-shadow: 0px 0px 0px 3px #fff;}

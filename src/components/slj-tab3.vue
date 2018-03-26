@@ -54,7 +54,7 @@
 <style scoped lang="less">
 @import (reference) '../assets/css/slj.less';
     .purse-box{width: 100%;height: auto;padding: 15px 10px; background: #363c40;}
-	.purse-balance{width: 100%; height: 200px;background: url(../assets/img/wallet.png) no-repeat;background-size: 100%; background-size: 100% 100%;text-align: center;padding: 35px;box-shadow: 0px 2px 3px 0px rgba(202,201, 201, 0.5);border-radius: 18px;}
+	.purse-balance{width: 100%; height: 200px;background: url("@{img}/wallet.png") no-repeat;background-size: 100%; background-size: 100% 100%;text-align: center;padding: 35px;box-shadow: 0px 2px 3px 0px rgba(202,201, 201, 0.5);border-radius: 18px;}
 	.pursemoney {color: #0079d7;font-size: 35px;font-weight: @fontweight;padding-bottom: 10px;
 		i {padding-left: 32px;}
 	} 
@@ -65,7 +65,7 @@
 	.details-frozen,.details-draw {float: left;width: 50%;text-align: center;}
 	.details-draw {float: right;}
 	ul.my-info li a {display: flex;
-		p {font-size: 15px;color: #333;-webkit-box-flex: 1;-webkit-flex: 1; -ms-flex: 1;flex: 1;}
+		p {font-size: 15px;color: #333;-webkit-box-flex: 1;-webkit-flex: 1; -ms-flex: 1;flex: 1;    text-align: right;}
 	}
 	.icon {display: inline-block;background: #00b2d2; color: #fff;.border-radius(8px);height: 32px;width: 32px;line-height: 35px;font-size: 23px;margin-top: 9px;text-align: center;margin-left: 12px;margin-right: 20px;}
 	.slj-tixian {background: #ea8400;}
