@@ -1,10 +1,14 @@
 <template>
     <div id="app">
-        <SLJHead></SLJHead>
+        <SLJHead :message='curView'></SLJHead>
         <component :is="curView"></component>
-        <ul class="foot">
-            <li v-for="(item, index) in tabs" @click="toggleView(index, item.view)">{{item.text}}</li>
+        <ul class="footer">
+            <li v-for="(item, index) in tabs" @click="toggleView(index, item.view)">
+                <i :class="item.clasSty"></i>
+                <span class="tab-label">{{item.text}}</span>
+            </li> 
         </ul>
+
     </div>
 </template>
 
@@ -21,18 +25,23 @@ export default {
             active: 0,
             curView: 'SLJTab1',
             tabs: [{
-                text: 'tab1',
+                clasSty: 'iconfont slj-shoukuan',
+                text: '收款',
                 view: 'SLJTab1'
             },{
-                text: 'tab2',
+                clasSty: 'iconfont slj-tuiguang',
+                text: '预约还款',
                 view: 'SLJTab2'
             },{
-                text: 'tab3',
+                clasSty: 'iconfont slj-qianbao',
+                text: '口袋',
                 view: 'SLJTab3'
             },{
-                text: 'tab4',
+                clasSty: 'iconfont slj-wode1',
+                text: '我的',
                 view: 'SLJTab4'
             }]
+
         }
     },
     methods: {
