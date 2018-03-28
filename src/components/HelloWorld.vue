@@ -85,12 +85,18 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App1'
+    name: 'HelloWorld',
+    data () {
+        return {
+            msg: 'Welcome to Your Vue.js App1'
+        }
+    },
+    created(){
+        console.log(this.$route.params.username)
+        if(!this.$route.params.username){
+            this.$router.replace('./')
+        }
     }
-  }
 }
 </script>
 

@@ -12,7 +12,7 @@
 			<div class="clt-keysbox">
 				<table class="keys-table">
 					<tr>
-						<td data-value="1">1</td>
+						<td data-value="1"><router-link :to="{name: 'HelloWorld', params: {username: '18673798863'}}">1</router-link></td>
 						<td data-value="2">2</td>
 						<td data-value="3">3</td>
 						<td rowspan="2" class="keys-del" data-value="del"><i class="iconfont slj-huishan"></i></td>
